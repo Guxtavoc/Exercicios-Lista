@@ -1,14 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "modulo.h"
 
-//DEFININDO A STRUCT COM OS DADOS DESEJADOS
-typedef struct modulo{
-    int id, idade;
-    char nome[15];
-    //DEFININDO UMA STRUCT PARA APONTAR PARA O PROXIMO NÓ
-    struct modulo *proximo;    
-}no;
+
 
 //FUNÇÕES DE INSERÇÃO
 //ISERÇÃO NO INICIO DA LISTA (ANTES DO INICIO)
@@ -76,4 +71,11 @@ void inserir_meio(no **lista,int ID,int Idade,char Nome[],int ref){
         }
     }else
         printf("Erro ao alocar memoria!\n");
+}
+//Função para a impressão dos itens da lista
+void imprimir_lista(no *no){
+    while(no!=NULL){
+        printf("|ID - %d|Nome - %s|Idade - %d|\n",no->id,no->nome,no->idade);
+        no=no->proximo;
+    }
 }

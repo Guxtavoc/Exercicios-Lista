@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 typedef struct modulo{
@@ -19,7 +19,7 @@ void inserir_inicio(no **lista,int ID, int Idade, char Nome[]){
         printf("Erro ao alocar memoria!\n");
 }
 //ISERÇÃO NO FINAL DA LISTA (Antes de NULL)
-void inserir_inicio(no **lista,int ID, int Idade, char Nome[]){
+void inserir_final(no **lista,int ID, int Idade, char Nome[]){
     no *aux,*novo=malloc(sizeof(no));
     if(novo){
         novo->id=ID;
@@ -58,3 +58,5 @@ void inserir_meio(no **lista,int ID,int Idade,char Nome[],int ref){
     }else
         printf("Erro ao alocar memoria!\n");
 }
+
+*/
