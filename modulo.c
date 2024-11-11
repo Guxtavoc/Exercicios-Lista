@@ -2,9 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "modulo.h"
-
-
-
 //FUNÇÕES DE INSERÇÃO
 //ISERÇÃO NO INICIO DA LISTA (ANTES DO INICIO)
 //DEFININDO A FUNÇÃO E SEUS ARGUMENTOS
