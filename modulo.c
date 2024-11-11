@@ -52,21 +52,26 @@ void inserir_final(no **lista,int ID, int Idade, char Nome[]){
         printf("Erro ao alocar memoria!\n");
 }
 //INSERÇÃO NO MEIO DO VETOR (apos um valor especifico)
-void inserir_meio(no **lista,int ID, int Idade, char Nome[],int ref){
+void inserir_meio(no **lista,int ID,int Idade,char Nome[],int ref){
     no *aux,*novo=malloc(sizeof(no));
+    //Verificando se a memoria foi alocada e em seguida atribuindo os valores a variavel
     if(novo){
         novo->id=ID;
         novo->idade=Idade;
         strcpy(novo->nome,Nome);
         novo->proximo=NULL;
+        //Verificando se há algum item na lista, caso não haja o este este se torna o primeira
         if(*lista==NULL){
             novo->proximo=NULL;
             *lista=novo;
         }
         else{
-            aux = *lista;
-            while(aux->proximo!=ref)
+        //Caso já existam itens na lista, o programa parte para a busca do referencial passado
+            aux = *lista;//Atribuindo o valor de lista a uma variavel auxiliar para não comprometer o inicio da lista
+            while(aux->id!=ref && aux->proximo!=NULL)//Caso o valor de referencia não seja encontrado o item será adiocionado no fim da lista
                 aux=aux->proximo;
+            //criando o elo entre o item criado com os demais itens da lista
+            novo->proximo=aux->proximo;
             aux->proximo=novo;
         }
     }else
