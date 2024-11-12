@@ -11,7 +11,7 @@ int main(){
         scanf("%d",&op);
         switch (op){
         case 1:
-            //imprimir_lista();
+            imprimir_lista(lista);
             break;
         case 2:
             printf("Digite o ID do usuario: ");
