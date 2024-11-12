@@ -14,13 +14,13 @@ int main(){
             imprimir_lista(lista);
             break;
         case 2:
-            printf("Digite o ID do usuario: ");
-            scanf("%d",&tId);
+            //printf("Digite o ID do usuario: ");
+            //scanf("%d",&tId);
             printf("Digite o nome do usuario: ");
             scanf("%s",tNome);
             printf("Digite a idade do usuario: ");
             scanf("%d",&tIdade);
-            inserir_inicio(&lista,tId,tIdade,tNome);
+            inserir_inicio(&lista,tIdade,tNome);
             break;
         case 3:
             break;

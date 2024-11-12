@@ -5,7 +5,8 @@
 //FUNÇÕES DE INSERÇÃO
 //ISERÇÃO NO INICIO DA LISTA (ANTES DO INICIO)
 //DEFININDO A FUNÇÃO E SEUS ARGUMENTOS
-void inserir_inicio(no **lista,int ID, int Idade, char Nome[]){
+int ID=0;
+void inserir_inicio(no **lista, int Idade, char Nome[]){
     //Criando uma variavel do tipo no com memoria dinamicamente alocada
     no *novo=malloc(sizeof(no));
     //Verificação se a memoria foi alocada corretamente
@@ -13,6 +14,7 @@ void inserir_inicio(no **lista,int ID, int Idade, char Nome[]){
         //Atribuindo os dados a struct 
         //NOTA!!!! como estamos atribuindo um valor a um endereço, utilizamos o operador "->"
         novo->id=ID;
+        ID++;
         novo->idade=Idade;
         strcpy(novo->nome,Nome);
         novo->proximo=*lista;//O novo nó apontará para o (antigo) inicio da lista
@@ -21,11 +23,12 @@ void inserir_inicio(no **lista,int ID, int Idade, char Nome[]){
         printf("Erro ao alocar memoria!\n");
 }
 //ISERÇÃO NO FINAL DA LISTA (Antes de NULL)
-void inserir_final(no **lista,int ID, int Idade, char Nome[]){
+void inserir_final(no **lista, int Idade, char Nome[]){
     //Declarando uma variavel para auxiliar a percorrer a lista sem risco de comprometer informações
     no *aux,*novo=malloc(sizeof(no));
     if(novo){
         novo->id=ID;
+        ID++;
         novo->idade=Idade;
         strcpy(novo->nome,Nome);
         novo->proximo=NULL;
@@ -44,11 +47,12 @@ void inserir_final(no **lista,int ID, int Idade, char Nome[]){
         printf("Erro ao alocar memoria!\n");
 }
 //INSERÇÃO NO MEIO DO VETOR (apos um valor especifico)
-void inserir_meio(no **lista,int ID,int Idade,char Nome[],int ref){
+void inserir_meio(no **lista,int Idade,char Nome[],int ref){
     no *aux,*novo=malloc(sizeof(no));
     //Verificando se a memoria foi alocada e em seguida atribuindo os valores a variavel
     if(novo){
         novo->id=ID;
+        ID++;
         novo->idade=Idade;
         strcpy(novo->nome,Nome);
         novo->proximo=NULL;
