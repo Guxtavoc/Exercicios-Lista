@@ -5,7 +5,13 @@ typedef struct modulo{
     //DEFININDO UMA STRUCT PARA APONTAR PARA O PROXIMO NÓ
     struct modulo *proximo;    
 }no;
-void inserir_inicio(no **lista, int Idade, char Nome[]);
-void inserir_final(no **lista, int Idade, char Nome[]);
-void inserir_meio(no **lista,int Idade,char Nome[],int ref);
-void imprimir_lista(no *no);
+//DEFININDO UMA STRUCT PARA CONTER O INICIO E CONTROLAR OS IDS DA LISTA
+typedef struct{
+    no *inicio;
+    int id;
+}Lista;
+void inciar_lista(Lista *lista);
+void inserir_inicio(Lista *lista, int Idade, char Nome[]);
+void inserir_final(Lista *lista, int Idade, char Nome[]);
+void inserir_meio(Lista *lista,int Idade,char Nome[],int ref);
+void imprimir_lista(Lista *lista);
