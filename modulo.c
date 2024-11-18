@@ -18,7 +18,7 @@ void inserir_inicio(no **lista, int Idade, char Nome[]){
         novo->idade=Idade;
         strcpy(novo->nome,Nome);
         novo->proximo=*lista;//O novo nó apontará para o (antigo) inicio da lista
-        *lista=novo;// Definindo que o (novo) inicio será a variavel novo
+        *lista=novo;//Definindo que o (novo) inicio será a variavel novo
     }else
         printf("Erro ao alocar memoria!\n");
 }
