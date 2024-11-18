@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include "modulo.h"
+#include "menu.h"
 //FUNÇÕES DE INSERÇÃO
-//ISERÇÃO NO INICIO DA LISTA (ANTES DO INICIO)
+//INSERÇÃO NO INICIO DA LISTA (ANTES DO INICIO)
 //DEFININDO A FUNÇÃO E SEUS ARGUMENTOS
-int ID=0;
-void inciar_lista(Lista *lista){
+void iniciar_lista(Lista *lista){
     lista->inicio=NULL;
     lista->id=0;
 }

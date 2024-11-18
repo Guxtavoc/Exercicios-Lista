@@ -10,7 +10,7 @@ typedef struct{
     no *inicio;
     int id;
 }Lista;
-void inciar_lista(Lista *lista);
+void iniciar_lista(Lista *lista);
 void inserir_inicio(Lista *lista, int Idade, char Nome[]);
 void inserir_final(Lista *lista, int Idade, char Nome[]);
 void inserir_meio(Lista *lista,int Idade,char Nome[],int ref);
